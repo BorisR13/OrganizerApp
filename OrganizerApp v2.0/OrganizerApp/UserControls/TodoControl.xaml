@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="OrganizerApp.TodoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OrganizerApp"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="348" d:DesignWidth="309"
+             >
+    <Grid Background="White">
+        <Label Name="Todolist" Content="To Do List" 
+               HorizontalAlignment="Center" FontFamily="Rockwell Extra Bold" 
+               FontSize="20" Foreground="#FF368736"/>
+        <Button Name="addEvent" Content="Add" Height="30" Width="60" Background="#FF368736"
+                Margin="124,308,125,10" Click="AddEvent_Click" />
+        <TextBox Name="Input" Margin="14,263,14,46" materialDesign:HintAssist.Hint =" Your Task" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"                         
+                         FontFamily="Champange &amp; Limousines" FontSize="18" AcceptsReturn="True" />
+        <Grid Name="Tasks" Height="200" Width="300" Margin="4,44,4,104">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <CheckBox Name="Task_1" Grid.Row="0" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_2" Grid.Row="1" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_3" Grid.Row="2" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_4" Grid.Row="3" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_5" Grid.Row="4" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_6" Grid.Row="5" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_7" Grid.Row="6" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_8" Grid.Row="7" FontFamily="Stencil"
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_9" Grid.Row="8" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+            <CheckBox Name="Task_10" Grid.Row="9" FontFamily="Stencil" 
+                      HorizontalAlignment="Center" Visibility="Hidden"/>
+        </Grid>
+    </Grid>
+</UserControl>

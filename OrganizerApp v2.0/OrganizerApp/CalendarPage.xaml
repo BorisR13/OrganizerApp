@@ -1,0 +1,46 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:Business="clr-namespace:Business;assembly=Business" xmlns:Calendar="clr-namespace:My.Calendar;assembly=My.Calendar" x:Class="OrganizerApp.CalendarPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="662" d:DesignWidth="1192"
+      Title="CalendarPage" Foreground="Black">
+    <Page.Resources>
+        <ImageBrush x:Key="Return_Button"
+            ImageSource="Images/icons8-left-45.png"/>
+    </Page.Resources>
+
+    <Page.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </RadialGradientBrush>
+    </Page.Background>
+    <Grid>
+        <Grid.Resources>
+            <ImageBrush x:Key="Return_Button"
+                        ImageSource="Images/icons8-left-45.png"/>
+        </Grid.Resources>
+        <Button x:Name="return_button" Height="50" Margin="10,10,1138,602"
+            Foreground="{x:Null}" Background="{StaticResource Return_Button}" 
+            RenderTransformOrigin="4.736,3.116" BorderBrush="{x:Null}" Click="Return_button_Click"/>
+        <ComboBox x:Name="cboMonth" 
+                  HorizontalAlignment="Left" Height="34" 
+                  Margin="79,10,0,0" VerticalAlignment="Top" 
+                  Width="152" FontSize="18.667" DisplayMemberPath="{Binding}" />
+        <ComboBox x:Name="cboYear" Height="34" 
+                  Margin="235,10,0,0" VerticalAlignment="Top"
+                  HorizontalAlignment="Left" Width="87" 
+                  FontSize="18.667" DisplayMemberPath="{Binding}" />
+        <Calendar:MyCalendar x:Name="Calendar" HorizontalAlignment="Left" 
+                             Margin="0,28,0,0" VerticalAlignment="Top" 
+                             Height="633" Width="1192" DayChanged="Calendar_DayChanged"
+                             >
+            
+        </Calendar:MyCalendar>
+
+    </Grid>
+
+</Page>

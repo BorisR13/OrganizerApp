@@ -1,0 +1,58 @@
+﻿<Page x:Class="OrganizerApp.WeeklyPlansPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OrganizerApp"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+          mc:Ignorable="d" 
+          d:DesignHeight="652" d:DesignWidth="1192"
+      Title="WeeklyPlansPage">
+    
+    <Grid Background="White">
+        <Grid.Resources>
+            <ImageBrush x:Key="Return_Button"
+                        ImageSource="Images/icons8-left-45.png"/>
+        </Grid.Resources>
+        <Button Content="Monday" Name="MondayBtn" HorizontalAlignment="Left" Height="222"
+                Margin="2,206,0,0" VerticalAlignment="Top"
+                Width="164" Background="White" BorderBrush="{x:Null}" 
+                Foreground="#FF368736" FontSize="24" Click="MondayBtn_Click"/>
+        <Button Content="Tuesday" Name="TuesdayBtn" HorizontalAlignment="Left" Height="222"
+                Margin="171,206,0,0" VerticalAlignment="Top"
+                Width="164" Background="White" BorderBrush="{x:Null}" 
+                Foreground="#FF368736" FontSize="24" Click="TuesdayBtn_Click"/>
+        <Button Content="Wednesday" Name="WednesdayBtn" HorizontalAlignment="Left" Height="222"
+                Margin="340,206,0,0" VerticalAlignment="Top"
+                Width="164" Background="White" BorderBrush="{x:Null}" 
+                Foreground="#FF368736" FontSize="24" Click="WednesdayBtn_Click"/>
+        <Button Content="Thursday" Name="ThursdayBtn" HorizontalAlignment="Left" Height="222"
+                Margin="509,206,0,0" VerticalAlignment="Top"
+                Width="164" Background="White" BorderBrush="{x:Null}" 
+                Foreground="#FF368736" FontSize="24" Click="ThursdayBtn_Click"/>
+        <Button Content="Friday" Name="FridayBtn" HorizontalAlignment="Left" Height="222"
+                Margin="680,206,0,0" VerticalAlignment="Top"
+                Width="164" Background="White" BorderBrush="{x:Null}" 
+                Foreground="#FF368736" FontSize="24" Click="FridayBtn_Click"/>
+        <Button Content="Saturday" Name="SaturdayBtn" HorizontalAlignment="Left" Height="222"
+                Margin="849,206,0,0" VerticalAlignment="Top"
+                Width="164" Background="White" BorderBrush="{x:Null}" 
+                Foreground="#FF368736" FontSize="24" Click="SaturdayBtn_Click"/>
+        <Button Content="Sunday" Name="SundayBtn" HorizontalAlignment="Left" Height="222"
+                Margin="1018,206,0,0" VerticalAlignment="Top"
+                Width="164" Background="White" BorderBrush="{x:Null}" 
+                Foreground="#FF368736" FontSize="24" Click="SundayBtn_Click"/>
+        <Label Content="Weekly Plans" HorizontalAlignment="Center" 
+               Margin="85,44,0,0" VerticalAlignment="Top" 
+               Height="81" Width="419" FontFamily="Stencil"
+               FontWeight="Bold" FontSize="48" 
+               Background="White" Foreground="#FF368736"/>
+        <Canvas x:Name="Week_Controls" Width="1192" Height="662">
+            <ContentPresenter Content="{Binding Path=ChildContent, ElementName=uc}"/>
+        </Canvas>
+        <Button Name="return_button" Height="50" Margin="46,44,1102,558"
+                Foreground="{x:Null}" Background="{StaticResource Return_Button}" 
+                RenderTransformOrigin="4.736,3.116" BorderBrush="{x:Null}" Click="Return_button_Click"/>
+
+    </Grid>
+</Page>
